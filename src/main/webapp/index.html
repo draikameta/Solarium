@@ -1,10 +1,81 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Bem-Vindo - SOLARIUM</title>
+</head>
+<body>
+    <div class="container">
+        <!-- login -->
+         <div class="form-box login">
+            <form action="/login" method="post">
+                <img class="logo-img" src="./img/logo solarium.jpeg" alt="logo-solarium">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Usuário..." name="email" required>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Senha..." name="senha" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Esqueci a senha</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>ou login com redes sociais</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </form>
+         </div>
+         <!-- registro -->
+          <div class="form-box register">
+            <form action="/register" method="post">
+                <img class="logo-img2" src="./img/logo solarium.jpeg" alt="logo-solarium">
+                <h1>Cadastro</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Usuário..." name="nome" required>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email..." name="email" required>
+                    <i class="fa-solid fa-at"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Senha..." name="senha" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" class="btn">Cadastre-se</button>
+                <p>ou cadastro com redes sociais</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </form>
+         </div>
+          <!-- toggle box -->
+           <div class="toggle-box">
+            <!-- toggle box left -->
+             <div class="toggle-panel left">
+                <h1 class="ola-bemvindo">Olá, Seja bem-vindo!</h1>
+                <p>Não possui uma conta?</p>
+                <button class="btn btn-register">Cadastre-se</button>
+                </div>
+             <!-- toggle box right -->
+              <div class="toggle-panel right">
+                <h1>Bem-Vindo de volta!</h1>
+                <p>Já tem uma conta?</p>
+                <button class="btn btn-login">Login</button>
+              </div>
+           </div>
+    </div>
+</body>
+<script src="script.js"></script>
 </html>

@@ -1,6 +1,6 @@
 package br.com.solarium.dao;
 
-import maven.org.mindrot.jbcrypt.BCrypt;
+import org.mindrot.jbcrypt.BCrypt;
 import br.com.solarium.util.ConexaoBD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
