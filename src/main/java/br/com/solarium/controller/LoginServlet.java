@@ -9,20 +9,23 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/register")
-public class CadastroServlet extends HttpServlet {
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 	
 	@Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 		
-		String nome = request.getParameter("nome");
 		String email = request.getParameter("email");
 		String senha = request.getParameter("senha");
 		
 		try {
-			new UsuarioDAO().cadastrar(nome, email, senha);
-			response.sendRedirect("index.html");
+			boolean loginValido = new UsuarioDAO().validarLogin(email, senha);
+			if (loginValido == true) {
+				response.sendRedirect("interfacePrincipal.html");
+			} else {
+				response.sendRedirect("index.html");
+			}
 		} catch (SQLException e) {
 			throw new ServletException(e);
 		}
