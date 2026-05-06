@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 2rem;
+    margin: 0 50px;
+}
+
+.section--lg{
+    padding-block: 4rem;
+}
+
+.form__input{
+    border: 1px solid #888;
+    padding-inline: 1rem;
+    height: 45px;
+    border-radius: .25rem;
+}
+
+header{
+    background-color: #f3e3d1;
+    height: 60px;
+}
+
+.nav,
+.nav__menu,
+.nav__list,
+.header__user-actions {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav{
+    height: calc(var(--header-height) + 2.5rem);
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+
+.nav__logo-img {
+    width: 150px;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.nav__menu {
+    width: 100%;
+    margin-left: 2.5rem;
+}
+
+.nav__list {
+    column-gap: 2.5rem;
+    margin-right: auto;
+}
+
+.nav__link {
+    color: #333;
+    font-weight: 500;
+}
+
+.header__search {
+    width: 340px;
+    position: relative;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+.header__search .form__input {
+    width: 100%;
+}
+
+.search__btn {
+    position: absolute;
+    top: 24%;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.header__user-actions {
+    column-gap: 1.25rem;
+}
+
+.header__action-btn{
+    position: relative;
+}
+
+.header__action-btn i {
+    width: 2px;
+    color: #333;
+    margin-right: 35px;
+}
+
+.header__action-btn .count {
+    position: absolute;
+    top: -0.650rem;
+    right: -0.650rem;
+    background-color: #FFA645;
+    color: #333;
+    height: 14px;
+    width: 14px;
+    line-height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+    margin-right: 36px;
+}
+
+/* ACTIVE LINK  min 41:06*/
+.active-link,
+.nav__link:hover {
+    color:#FFA645
+}
+
+/* home */
+
+.home__section--lg{
+    display: flex;
+    justify-content: center;
+}
+
+.home__container {
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+}
+
+.home__subtitle{
+    font-size: 25px;
+}
+
+.home__description{
+    font-size: 15px;
+    margin-block: .5rem 2rem;
+}
+
+.home__subtitle {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.home__tittle {
+    font-size: 700;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.energiasolartitle {
+    color: #e27908;
+    font-size: 800;
+}
+
+.home__img {
+    height: 500px;
+    margin-top: 70px;
+    justify-self: flex-end;
+}
+
+/* Botão */
+
+.btn {
+    display: inline-block;
+    background-color: #FFA645;
+    color: black;
+    padding-inline: 1.75rem;
+    height: 49px;
+    line-height: 49px;
+    border-radius: .25rem;
+    font-weight: 600;
+    border: 2px solid #FFA645;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #FFA645;
+}
+
+/* mais procurados */
+
+.img_maisprocurados {
+    height: 200px;
+    margin-left: 40px;
+}
+
+.category__title{
+    color: #333;
+    margin: 10px 40px;
+}

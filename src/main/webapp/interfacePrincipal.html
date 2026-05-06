@@ -3,25 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="interfacePrincipal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
     <title>SOLARIUM</title>
 </head>
 <body>
-    <nav class="sidebar">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="./img/sol solarium.jpeg" alt="logo-sol">
-                </span>
-                <div class="text header-text">
-                    <span class="name">SOLARIUM</span>
-                    <span class="profession">Equipamentos Solares</span>
+    <header>
+        <nav class="nav  container">
+            <a href="#" class="nav__logo">
+                <img src="./img/logo solarium.jpeg" alt="" class="nav__logo-img">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="interfacePrincipal.html" class="nav__link active-link" >Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Shop</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Minha Conta</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/Solarium/logout" class="nav__link">Sair</a>
+                    </li>
+                </ul>
+
+                <div class="header__search">
+                    <input type="text" placeholder="Buscar intens..." class="form__input">
+
+                    <button class="search__btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </div>
+<!-- coração favoritos min 34 -->
+            <div class="header__user-actions">
+                <a href="#" class="header__action-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="count">3</span>
+                </a>
+<!-- carrinho min 34:53 -->
+                <a href="#" class="header__action-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count">3</span>
+                </a>
+            </div>
+        </nav>
+    </header>
 
-            <i></i>
-        </header>
-    </nav>
+    <main class="main">
+        <section class="home__section--lg">
+            <div class="home__container container grid">
+               <div class="home__content">
+                <span class="home__subtitle">Só na SOLARIUM</span>
+                <h1 class="home__title">Equipamentos de <span class="energiasolartitle">Energia Solar</span>
+                </h1>
+                <p class="home__description">Confiança e Qualidade no mesmo lugar!</p>
+                <a href="#" class="btn">Saiba Mais</a>
+               </div> 
+
+               <img src="./img/imagemAnuncio1.png" alt="" class="home__img">
+            </div>
+        </section>
+
+        <section class="categories container section">
+            <h3 class="section__title">Mais Procurados</h3>
+
+            <div class="categories__container swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem1" class="category__img">
+
+                        <h3 class="category__title">Ecoflow</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem2" class="category__img">
+
+                        <h3 class="category__title">Kit estação de energia</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem3" class="category__img">
+
+                        <h3 class="category__title">Inversor solar</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem4" class="category__img">
+
+                        <h3 class="category__title">Placa Solar</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem5" class="category__img">
+
+                        <h3 class="category__title">Equipamentos fotovoltaicos</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem6" class="category__img">
+
+                        <h3 class="category__title">Coletor Solar</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem7" class="category__img">
+
+                        <h3 class="category__title">Painel Solar</h3>
+                    </a>
+
+                    <a href="#" class="category__item swiper-slide">
+                        <img class="img_maisprocurados" src="./img/sol solarium.jpeg" alt="Imagem8" class="category__img">
+
+                        <h3 class="category__title">Gerador solar</h3>
+                    </a>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </main>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
+<script src="interfacePrincipal.js"></script>
 </html>
