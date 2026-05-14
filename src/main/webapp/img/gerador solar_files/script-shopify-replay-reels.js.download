@@ -1,0 +1,67 @@
+;(async function () {
+  if (Shopify.shop) {
+    const platform = 'shopify'
+    const location = window.location.href
+    const urlParams = new URLSearchParams(window.location.search)
+    const previewReplay = urlParams.get('previewreplay')
+    const store_id = Shopify.shop
+    const product_id = ShopifyAnalytics?.meta?.product?.id ? ShopifyAnalytics.meta.product.id : Shopify.product?.id
+    const places = {
+      home: { target: '.header', method: 'after' },
+      product: { target: '.product-form', method: 'after' },
+      category: { target: '.header', method: 'after' },
+    }
+    if (location) {
+      const container = document.createElement('div')
+      container.id = 'replay-root'
+      container.style.setProperty('display', 'block', 'important')
+      document.body.appendChild(container)
+
+      const stylesheetLink = document.createElement('link')
+      stylesheetLink.rel = 'stylesheet'
+      stylesheetLink.id = 'id-replay-style'
+      stylesheetLink.href = 'https://empreender.nyc3.cdn.digitaloceanspaces.com/static/REPLAY/widget/widget-replay.css'
+      stylesheetLink.setAttribute('importance', 'high')
+
+      const shadow = container.attachShadow({ mode: 'open' })
+      const shadowRootDiv = document.createElement('div')
+      shadow.appendChild(stylesheetLink)
+      shadow.appendChild(shadowRootDiv)
+
+      const externalScript = document.createElement('script')
+      externalScript.src = 'https://empreender.nyc3.cdn.digitaloceanspaces.com/static/REPLAY/script-posicionar-replay.js'
+      externalScript.async = true
+      externalScript.onload = () => {}
+      document.head.appendChild(externalScript)
+
+      import('https://empreender.nyc3.cdn.digitaloceanspaces.com/static/REPLAY/widget/widget-replay.js').then(({ initWidget }) => {
+        initWidget(shadowRootDiv, {
+          platform: platform,
+          store_id: store_id,
+          location: location,
+          product_id: product_id || null,
+        })
+      })
+
+      const [storiesModule] = await Promise.all([import('https://empreender.nyc3.cdn.digitaloceanspaces.com/static/REPLAY/widget/stories-replay.js')])
+
+      storiesModule.initStories(shadowRootDiv, {
+        platform: platform,
+        store_id: store_id,
+        location: location,
+        product_id: product_id || null,
+        places,
+        type: 'feed',
+      })
+
+      storiesModule.initStories(shadowRootDiv, {
+        platform: platform,
+        store_id: store_id,
+        location: location,
+        product_id: product_id || null,
+        places,
+        type: 'carousel',
+      })
+    }
+  }
+})()

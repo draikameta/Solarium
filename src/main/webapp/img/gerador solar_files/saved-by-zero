@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Saved By Zero';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Saved By Zero'), url('https://fonts.cdnfonts.com/s/6276/saved by zero.woff') format('woff');
+}
+
+

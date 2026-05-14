@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="interfacePrincipal.css">
+    <title>DETAILS</title>
+</head>
+<body>
+<header>
+        <nav class="nav  container">
+            <a href="#" class="nav__logo">
+                <img src="./img/logo solarium.jpeg" alt="" class="nav__logo-img">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="interfacePrincipal.html" class="nav__link " >Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Minha Conta</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/Solarium/logout" class="nav__link">Sair</a>
+                    </li>
+                </ul>
+
+                <div class="header__search">
+                    <input type="text" placeholder="Buscar intens..." class="form__input">
+
+                    <button class="search__btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+<!-- coração favoritos min 34 -->
+            <div class="header__user-actions">
+                <a href="#" class="header__action-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="count">3</span>
+                </a>
+<!-- carrinho min 34:53 -->
+                <a href="#" class="header__action-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count">3</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+<section class="breadcrumb">
+            <ul class="breadcrumb__list flex container">
+            <li> <a href="interfacePrincipal.html" class="breadcrumb__link">Home</a></li>
+            <li><span class="breadcrumb__link">></span></li>
+            <li><span class="breadcrumb__link">Details</span></li>
+            <li><span class="breadcrumb__link">></span></li>
+            <li><span class="breadcrumb__link">Produto</span></li>
+            </ul>
+        </section>
+
+        <section class="details section--lg">
+            <div class="details__container container grid">
+                <div class="details__group">
+                    <img src="./img/imagemAnuncio1.png" alt="" class="details__img">
+                    
+                    <div class="details__small-images grid">
+                        <img src="./img/sol solarium.jpeg" alt="" class="details__small-img">
+                    </div>
+
+                
+                </div>
+                <div class="details__group">
+                    <h3 class="details__title">Nome Produto</h3>
+                    <p class="details__brand">Marca produto</p>
+
+                    <div class="details__price flex">
+                        <span class="new__price">R$XXX</span>
+                        <span class="old__price">R$XYX</span>
+                    </div>
+                    <p class="short__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur id commodi illo aspernatur temporibus, molestias libero veniam vitae asperiores eos hic sit suscipit quae laboriosam ducimus non. Recusandae, animi aperiam.</p>
+                    <a href="" class="btn btn--sm">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="details.js"></script>
+</body>
+</html>

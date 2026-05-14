@@ -11,15 +11,15 @@
     <div class="container">
         <!-- login -->
          <div class="form-box login">
-            <form action="/Solarium/login" method="post">
+            <form action="#">
                 <img class="logo-img" src="./img/logo solarium.jpeg" alt="logo-solarium">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Usuário..." name="email" required>
+                    <input type="text" placeholder="Usuário..." required>
                     <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Senha..." name="senha" required>
+                    <input type="password" placeholder="Senha..." required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
                 <div class="forgot-link">
@@ -36,23 +36,26 @@
          </div>
          <!-- registro -->
           <div class="form-box register">
-            <form action="/Solarium/register" method="post">
+            <form action="#">
                 <img class="logo-img2" src="./img/logo solarium.jpeg" alt="logo-solarium">
                 <h1>Cadastro</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Usuário..." name="nome" required>
+                    <input type="text" placeholder="Usuário..." required>
                     <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="email" placeholder="Email..." name="email" required>
+                    <input type="email" placeholder="Email..." required>
                     <i class="fa-solid fa-at"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Senha..." name="senha" required>
+                    <input type="password" placeholder="Senha..." required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
-                <button type="submit" class="btn">Cadastre-se</button>
-                <p>ou cadastro com redes sociais</p>
+                <div class="forgot-link">
+                    <a href="#">Esqueci a senha</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>ou login com redes sociais</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-google"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
